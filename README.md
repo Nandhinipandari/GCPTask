@@ -1,8 +1,8 @@
 # GCPTaskDatastore App Engine (standard)
 
-You can see the output and make API calls in the Nodejs code below:
+For fetching the records of all customers and with particular customer uding their id's,a program has been created in the NodeJs with datastore and executed successfully.
 
-https://github.com/Nandhinipandari/GCPTask
+Below is the sample outcome
 
 Sample record:
 
