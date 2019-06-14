@@ -16,7 +16,7 @@ https://future-shuttle-243610.appspot.com/getallcustomers
 This displays all records in the datastore
 
 /getCustomerId
-https://zimablue.appspot.com/getCustomerId?id=101
+https://future-shuttle-243610.appspot.com/getcustomer?id=103
 
 
 Fetches the records matching id={"id"}
