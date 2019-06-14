@@ -1,6 +1,7 @@
-# GCPTaskDatastore App Engine (standard) API
+# GCPTaskDatastore App Engine (standard)
 
-You can see the output and make API calls in the python notebook below: https://colab.research.google.com/github/iampawanpoojary/datastoreAPI/blob/master/datastoreAPI.ipynb
+You can see the output and make API calls in the python notebook below:
+https://github.com/Nandhinipandari/GCPTask
 
 Sample record:
 
