@@ -2,19 +2,14 @@ const express = require('express');
 const {Datastore} = require('@google-cloud/datastore');
 const datastore = new Datastore();
 const app = express();
-// [START hello_world]
-// Say hello!
+
 app.get('/getallcustomers', (req, res) => {
-  //res.status(200).send('Hello, world!');
+  
     try {
       res.setHeader("Content-Type", "application/json");
-      //Check for sac no
-      
+          
       let namespace="demo-Customer";
           let kind = "customer";
-          //let custid="1";
-         //let lastname="Einstein";
-          //let firstname= "albert";
       const query = datastore.createQuery(namespace, kind);
       datastore.runQuery(query, (err, result) =>{
         if(result.length > 0){
@@ -27,20 +22,15 @@ app.get('/getallcustomers', (req, res) => {
       res.status(400).send(JSON.stringify({ result: "Something went wrong. " + error })); 
     }  
 });
-// [END hello_world]
 
 app.get('/getcustomer', (req, res) => {
-  //res.status(200).send('Hello, world!');
+
     try {
       res.setHeader("Content-Type", "application/json");
-      //Check for sac no
       
       let namespace="demo-Customer";
           let kind = "customer";
       let id = req.param("id");
-          //let custid="1";
-         //let lastname="Einstein";
-          //let firstname= "albert";
       const query = datastore.createQuery(namespace, kind).filter('id', '=', id);
       datastore.runQuery(query, (err, result) =>{
         if(result.length > 0){
