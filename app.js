@@ -2,7 +2,7 @@ const express = require('express');
 const {Datastore} = require('@google-cloud/datastore');
 const datastore = new Datastore();
 const app = express();
-
+//getting the customer details
 app.get('/getallcustomers', (req, res) => {
   
     try {
@@ -22,7 +22,7 @@ app.get('/getallcustomers', (req, res) => {
       res.status(400).send(JSON.stringify({ result: "Something went wrong. " + error })); 
     }  
 });
-
+// getting customer details according to the id passed by the user
 app.get('/getcustomer', (req, res) => {
 
     try {
@@ -31,6 +31,7 @@ app.get('/getcustomer', (req, res) => {
       let namespace="demo-Customer";
           let kind = "customer";
       let id = req.param("id");
+      //passing the id of the customer to get details
       const query = datastore.createQuery(namespace, kind).filter('id', '=', id);
       datastore.runQuery(query, (err, result) =>{
         if(result.length > 0){
