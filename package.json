@@ -10,7 +10,7 @@
   "private": true,
   "cloud-repo-tools": {
     "requiresKeyFile": true,
-    "requiresProjectId": true,
+    "requiresProjectId": true
   },
   "scripts": {
     "start": "node app.js",
