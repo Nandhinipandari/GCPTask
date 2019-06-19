@@ -9,4 +9,4 @@ steps:
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
-images: ['gcr.io/future-shuttle-243610/myimage']
+images: ['gcr.io/future-shuttle-243610/my-image']
