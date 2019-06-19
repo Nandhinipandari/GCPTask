@@ -2,6 +2,11 @@ const express = require('express');
 const {Datastore} = require('@google-cloud/datastore');
 const datastore = new Datastore();
 const app = express();
+
+ app.get('/', (req, res) => {
+  res.status(200).send('Welcome to Datasore-AppEngine Demo!');
+});
+
 //getting the customer details
 app.get('/getallcustomers', (req, res) => {
   
