@@ -4,7 +4,7 @@ const datastore = new Datastore();
 const app = express();
 
  app.get('/', (req, res) => {
-  res.status(200).send('Welcome to Datasore-AppEngine Demo-V2!');
+  res.status(200).send('Welcome to Datasore-AppEngine Demo-hello!');
 });
 
 //getting the customer details
