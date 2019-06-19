@@ -3,9 +3,9 @@ steps:
   args: ['build', '-t', 'gcr.io/future-shuttle-243610/my-image', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/future-shuttle-243610/my-image:latest']
+  args: ['push', 'gcr.io/future-shuttle-243610/my-image']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/my-deployment', 'my-deployment=gcr.io/future-shuttle-243610/my-image:latest']
+  args: ['set', 'image', 'deployment/my-deployment', 'my-deployment=gcr.io/future-shuttle-243610/my-image']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
